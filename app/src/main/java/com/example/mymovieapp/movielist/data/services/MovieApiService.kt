@@ -1,4 +1,4 @@
-package com.example.mymovieapp.services
+package com.example.mymovieapp.movielist.data.services
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class MovieApiService {
 
     companion object {
-        private const val BASE_URL = "https://api.themoviedb.org"
+        private const val BASE_URL = "https://api.themoviedb.org/"
         private var retrofit: Retrofit? = null
 
         fun getInstance(): Retrofit {
