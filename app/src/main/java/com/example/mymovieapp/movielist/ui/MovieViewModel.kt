@@ -1,9 +1,10 @@
-package com.example.mymovieapp.movielist.ui.viewmodel
+package com.example.mymovieapp.movielist.ui
 
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.bumptech.glide.load.engine.Resource
 import com.example.mymovieapp.movielist.data.models.Movie
 import com.example.mymovieapp.movielist.data.services.MovieApiInterface
 import com.example.mymovieapp.movielist.data.services.MovieApiService
