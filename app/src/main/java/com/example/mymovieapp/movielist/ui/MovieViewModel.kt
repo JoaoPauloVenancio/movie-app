@@ -1,18 +1,19 @@
-package com.example.mymovieapp.viewmodel
+package com.example.mymovieapp.movielist.ui
 
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mymovieapp.models.Movie
-import com.example.mymovieapp.services.MovieApiInterface
-import com.example.mymovieapp.services.MovieApiService
+import com.bumptech.glide.load.engine.Resource
+import com.example.mymovieapp.movielist.data.models.Movie
+import com.example.mymovieapp.movielist.data.services.MovieApiInterface
+import com.example.mymovieapp.movielist.data.services.MovieApiService
 import com.example.mymovieapp.utils.Resource
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MovieViewModel : ViewModel() {
+class MovieViewModel() : ViewModel() {
 
     private var _movieList = MutableLiveData<Resource<List<Movie>>>()
     val movieList: LiveData<Resource<List<Movie>>> get() = _movieList

@@ -1,11 +1,11 @@
-package com.example.mymovieapp.adapter
+package com.example.mymovieapp.movielist.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.mymovieapp.databinding.MovieItemBinding
-import com.example.mymovieapp.models.Movie
+import com.example.mymovieapp.movielist.data.models.Movie
 
 class MovieAdapter(
     private val movies: List<Movie>
