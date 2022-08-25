@@ -1,4 +1,4 @@
-package com.example.mymovieapp.movielist.ui.view
+package com.example.mymovieapp.movielist.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mymovieapp.movielist.data.models.MovieAdapter
 import com.example.mymovieapp.databinding.MovieFragmentBinding
 import com.example.mymovieapp.movielist.data.models.Movie
 import com.example.mymovieapp.utils.Status
-import com.example.mymovieapp.movielist.ui.viewmodel.MovieViewModel
 
 class MovieFragment : Fragment() {
 

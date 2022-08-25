@@ -1,4 +1,4 @@
-package com.example.mymovieapp.movielist.data.models
+package com.example.mymovieapp.movielist.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
