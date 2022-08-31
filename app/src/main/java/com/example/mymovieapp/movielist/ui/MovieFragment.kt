@@ -1,7 +1,6 @@
 package com.example.mymovieapp.movielist.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mymovieapp.databinding.MovieFragmentBinding
 import com.example.mymovieapp.movielist.data.models.Movie
-import com.example.mymovieapp.utils.Status
 
 class MovieFragment : Fragment() {
 
@@ -35,30 +33,9 @@ class MovieFragment : Fragment() {
         setupView()
     }
 
-    private fun setupView() {
-        viewModel.getMovieData()
-    }
+    private fun setupView() {}
 
-    private fun setupObserver() {
-        viewModel.movieList.observe(viewLifecycleOwner) { resource ->
-            when (resource.status) {
-                Status.LOADING -> {
-                    showProgressBar()
-                }
-                Status.SUCCESS -> {
-                    if (resource.data.isNullOrEmpty()) {
-                        showEmptyMessage()
-                    } else {
-                        configureRecyclerView(resource.data)
-                        showRecyclerView()
-                    }
-                }
-                Status.ERROR -> {
-                    Log.d("joao", "ERRO!!")
-                    }
-                }
-            }
-        }
+    private fun setupObserver() {}
 
     private fun configureRecyclerView(movies: List<Movie>) {
 

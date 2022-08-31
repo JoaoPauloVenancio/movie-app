@@ -18,8 +18,6 @@ class MovieAdapter(
         fun bind(item: Any) {
             if (item is Movie) {
                 binding.movieTitle.text = item.title
-                binding.movieReleaseDate.text = item.release
-                Glide.with(itemView).load(IMAGE_BASE + item.post).into(binding.moviePoster)
             }
         }
     }
