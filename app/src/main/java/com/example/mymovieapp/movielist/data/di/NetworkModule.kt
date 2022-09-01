@@ -43,7 +43,6 @@ object NetworkModule {
         return GsonConverterFactory.create()
     }
 
-
     @Provides
     fun provideMoviesApi(
         okHttpClient: OkHttpClient,

@@ -1,7 +1,8 @@
 package com.example.mymovieapp.movielist.data.repository
 
-import com.example.mymovieapp.movielist.data.models.Movie
+import com.example.mymovieapp.movielist.data.response.MovieResponse
 
 interface IMovieDatasource {
-    fun getMovies() : List<Movie>
+
+    fun getMovies() : List<MovieResponse>
 }

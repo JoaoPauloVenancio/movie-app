@@ -1,11 +1,12 @@
-package com.example.mymovieapp.movielist.data.models
+package com.example.mymovieapp.movielist.data.response
 
-data class Movie(
+data class MovieResponse(
     val id: String?,
     val title: String?,
     val post_path: String?,
     val release_date: String?,
     val adult: String?,
     val backdrop_path: String?,
-    val overview: String
+    val overview: String,
+    val genres: List<GenresResponse>
     )

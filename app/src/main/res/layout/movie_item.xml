@@ -12,7 +12,7 @@
     android:layout_marginBottom="8dp">
 
     <ImageView
-        android:id="@+id/movie_poster"
+        android:id="@+id/movie_image"
         android:layout_width="300px"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -34,7 +34,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/movie_image"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Bastard Inglorius"/>
 
@@ -45,7 +45,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/movie_image"
         app:layout_constraintTop_toBottomOf="@+id/movie_title"
         tools:text="Popularity: " />
 
@@ -56,7 +56,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/movie_image"
         app:layout_constraintTop_toBottomOf="@+id/movie_populatiry"
         tools:text="Released in:  " />
 
@@ -67,7 +67,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/movie_poster"
+        app:layout_constraintStart_toEndOf="@+id/movie_image"
         app:layout_constraintTop_toBottomOf="@+id/movie_release_date"
         tools:text="Genres: " />
 

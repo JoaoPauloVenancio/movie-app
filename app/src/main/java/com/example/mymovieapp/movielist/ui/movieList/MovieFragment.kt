@@ -1,0 +1,55 @@
+package com.example.mymovieapp.movielist.ui.movieList
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mymovieapp.databinding.MovieFragmentBinding
+import com.example.mymovieapp.movielist.data.domain.model.Movie
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class MovieFragment : Fragment() {
+
+    private var _binding: MovieFragmentBinding? = null
+    private val binding: MovieFragmentBinding get() = _binding!!
+    private val moviesAdapter = MovieAdapter()
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ) = MovieFragmentBinding.inflate(
+        inflater,
+        container,
+        false
+    ).apply {
+        _binding = this
+    }.root
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        configureRecyclerView()
+        moviesAdapter.submitList(
+            listOf(
+                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321"),
+                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321"),
+                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321"),
+                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321")
+            )
+        )
+    }
+
+
+
+    private fun configureRecyclerView() {
+        binding.rcvMovies.apply {
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = moviesAdapter
+        }
+    }
+
+}
