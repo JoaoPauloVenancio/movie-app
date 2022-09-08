@@ -3,7 +3,7 @@ package com.example.mymovieapp.movielist.ui.movieList
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import coil.load
 import com.example.mymovieapp.R
 import com.example.mymovieapp.databinding.MovieItemBinding
 import com.example.mymovieapp.movielist.data.domain.model.Movie
@@ -23,10 +23,10 @@ class MovieViewHolder(
         popularity.text = movie.popularity
         releaseDate.text = movie.release
 //        genres.text = movie.genres
-        Glide.with(itemView)
-            .load(movie.image)
-            .fallback(R.drawable.ic_img_loading_error)
-            .into(image)
+        image.load(movie.image) {
+            crossfade(true)
+            placeholder(R.drawable.ic_img_loading_error)
+        }
     }
 
     companion object {

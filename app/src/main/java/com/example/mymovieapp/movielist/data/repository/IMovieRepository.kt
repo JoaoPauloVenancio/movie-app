@@ -4,5 +4,5 @@ import com.example.mymovieapp.movielist.data.response.MovieResponse
 
 interface IMovieRepository {
 
-    fun getMovies(): List<MovieResponse>
+    suspend fun getMovies(): List<MovieResponse>
 }

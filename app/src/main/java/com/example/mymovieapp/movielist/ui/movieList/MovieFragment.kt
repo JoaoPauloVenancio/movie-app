@@ -34,22 +34,18 @@ class MovieFragment : Fragment() {
         configureRecyclerView()
         moviesAdapter.submitList(
             listOf(
-                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321"),
-                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321"),
-                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321"),
-                Movie("http://image.tmdb.org/t/p/w500/rugyJdeoJm7cSJL1q4jBpTNbxyU.jpg","Bastardos Inglorios","3213213","321321321")
+                Movie("https://image.tmdb.org/t/p/w300/etc6HKBEhNySNnYU2nRgbSeIyoW.jpg","Bastardos Inglorios","3213213","321321321"),
+                Movie("https://image.tmdb.org/t/p/w300/etc6HKBEhNySNnYU2nRgbSeIyoW.jpg","Bastardos Inglorios","3213213","321321321"),
+                Movie("https://image.tmdb.org/t/p/w300/etc6HKBEhNySNnYU2nRgbSeIyoW.jpg","Bastardos Inglorios","3213213","321321321"),
+                Movie("https://image.tmdb.org/t/p/w300/etc6HKBEhNySNnYU2nRgbSeIyoW.jpg","Bastardos Inglorios","3213213","321321321")
             )
         )
     }
 
-
-
     private fun configureRecyclerView() {
         binding.rcvMovies.apply {
             setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(requireContext())
             adapter = moviesAdapter
         }
     }
-
 }

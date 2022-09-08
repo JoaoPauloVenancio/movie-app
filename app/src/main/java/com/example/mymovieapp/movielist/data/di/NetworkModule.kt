@@ -2,6 +2,7 @@ package com.example.mymovieapp.movielist.data.di
 
 import com.example.mymovieapp.BuildConfig.BASE_URL
 import com.example.mymovieapp.BuildConfig.DEBUG
+import com.example.mymovieapp.movielist.data.services.MovieApiInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -47,12 +48,13 @@ object NetworkModule {
     fun provideMoviesApi(
         okHttpClient: OkHttpClient,
         converterFactory: GsonConverterFactory
-    ): Retrofit {
+    ): MovieApiInterface {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
             .build()
+            .create(MovieApiInterface::class.java)
     }
 
 }
