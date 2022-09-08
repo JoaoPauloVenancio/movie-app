@@ -1,8 +1,7 @@
 package com.example.mymovieapp.movielist.data.datasource
 
-import com.example.mymovieapp.movielist.data.response.MovieResponse
 
-interface IMovieDatasource {
+interface IMovieDatasource<T> {
 
-    suspend fun getMovies() : List<MovieResponse>
+    suspend fun getMovies(queries: Map<String, String>) : T
 }

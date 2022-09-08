@@ -9,4 +9,10 @@ data class MovieResponse(
     val backdrop_path: String?,
     val overview: String?,
     val genres: List<GenresResponse>?
-    )
+)
+
+
+data class GenresResponse(
+    val id: String,
+    val name: String
+)

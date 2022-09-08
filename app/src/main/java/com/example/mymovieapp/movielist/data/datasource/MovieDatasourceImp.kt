@@ -6,9 +6,9 @@ import javax.inject.Inject
 
 class MovieDatasourceImp @Inject constructor(
     private val movieApi: MovieApiInterface
-    ) : IMovieDatasource {
+) : IMovieDatasource<MovieResponse> {
 
-    override suspend fun getMovies(): List<MovieResponse> {
-        return movieApi.getMovieList()
+    override suspend fun getMovies(queries: Map<String, String>): MovieResponse {
+        return movieApi.getMovieList(queries)
     }
 }
