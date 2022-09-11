@@ -1,14 +1,14 @@
-package com.example.mymovieapp.movielist.ui.movieList
+package com.example.mymovieapp.movielist.ui
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.example.mymovieapp.movielist.data.domain.model.Movie
+import com.example.mymovieapp.movielist.ui.model.Movie
 
 class MovieAdapter : ListAdapter<Movie, MovieViewHolder>(diff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        return MovieViewHolder.create(parent)
+        return MovieViewHolder(parent)
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {

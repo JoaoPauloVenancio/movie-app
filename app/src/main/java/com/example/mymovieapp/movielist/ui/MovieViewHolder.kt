@@ -1,4 +1,4 @@
-package com.example.mymovieapp.movielist.ui.movieList
+package com.example.mymovieapp.movielist.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.mymovieapp.R
 import com.example.mymovieapp.databinding.MovieItemBinding
-import com.example.mymovieapp.movielist.data.domain.model.Movie
+import com.example.mymovieapp.movielist.ui.model.Movie
+
+@Suppress("FunctionName")
+fun MovieViewHolder(parent: ViewGroup): MovieViewHolder {
+    val inflater = LayoutInflater.from(parent.context)
+    val itemBinding = MovieItemBinding.inflate(inflater, parent, false)
+    return MovieViewHolder(itemBinding)
+}
 
 class MovieViewHolder(
     movieItemBinding: MovieItemBinding
@@ -28,13 +35,4 @@ class MovieViewHolder(
             placeholder(R.drawable.ic_img_loading_error)
         }
     }
-
-    companion object {
-        fun create(parent: ViewGroup): MovieViewHolder {
-            val inflater = LayoutInflater.from(parent.context)
-            val itemBinding = MovieItemBinding.inflate(inflater, parent, false)
-            return MovieViewHolder(itemBinding)
-        }
-    }
-
 }

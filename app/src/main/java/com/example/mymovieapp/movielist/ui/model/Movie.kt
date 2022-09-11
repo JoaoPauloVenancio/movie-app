@@ -1,4 +1,4 @@
-package com.example.mymovieapp.movielist.data.domain.model
+package com.example.mymovieapp.movielist.ui.model
 
 data class Movie(
     val image: String,

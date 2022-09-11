@@ -1,13 +1,12 @@
-package com.example.mymovieapp.movielist.ui.movieList
+package com.example.mymovieapp.movielist.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mymovieapp.databinding.MovieFragmentBinding
-import com.example.mymovieapp.movielist.data.domain.model.Movie
+import com.example.mymovieapp.movielist.ui.model.Movie
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -47,5 +46,10 @@ class MovieFragment : Fragment() {
             setHasFixedSize(true)
             adapter = moviesAdapter
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

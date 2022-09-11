@@ -1,8 +1,8 @@
-package com.example.mymovieapp.movielist.data.di
+package com.example.mymovieapp.movielist.di
 
 import com.example.mymovieapp.BuildConfig.BASE_URL
 import com.example.mymovieapp.BuildConfig.DEBUG
-import com.example.mymovieapp.movielist.data.services.MovieApiInterface
+import com.example.mymovieapp.movielist.data.datasource.remote.services.MovieApiInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

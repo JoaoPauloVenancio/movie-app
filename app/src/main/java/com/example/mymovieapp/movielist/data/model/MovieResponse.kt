@@ -1,4 +1,4 @@
-package com.example.mymovieapp.movielist.data.response
+package com.example.mymovieapp.movielist.data.model
 
 data class MovieResponse(
     val id: String?,
